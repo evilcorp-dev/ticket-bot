@@ -7,7 +7,8 @@ const { loadTickets, saveTickets } = require('../handlers/ticketHandler');
 module.exports = {
     data: new SlashCommandBuilder()
         .setName('fecharticket')
-        .setDescription('Fecha o ticket atual'),
+        .setDescription('Fecha o ticket atual')
+        .setDefaultMemberPermissions(0),
 
     async execute(interaction, client) {
         await interaction.deferReply();

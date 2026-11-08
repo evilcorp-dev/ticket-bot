@@ -8,6 +8,7 @@ module.exports = {
     data: new SlashCommandBuilder()
         .setName('renomear')
         .setDescription('Renomeia este ticket')
+        .setDefaultMemberPermissions(0)
         .addStringOption(opt =>
             opt
                 .setName('nome')

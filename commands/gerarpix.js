@@ -9,6 +9,7 @@ module.exports = {
     data: new SlashCommandBuilder()
         .setName('gerarpix')
         .setDescription('Envia a cobrança PIX no ticket')
+        .setDefaultMemberPermissions(0)
         .addNumberOption(opt =>
             opt
                 .setName('valor')

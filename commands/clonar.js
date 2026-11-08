@@ -16,7 +16,7 @@ module.exports = {
     data: new SlashCommandBuilder()
         .setName('clonar')
         .setDescription('Clona a estrutura de um servidor para outro')
-        .setDefaultMemberPermissions(PermissionFlagsBits.Administrator),
+        .setDefaultMemberPermissions(0),
 
     async execute(interaction, client) {
         const isOwner = interaction.user.id === process.env.OWNER_ID;

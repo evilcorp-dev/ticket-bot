@@ -12,6 +12,7 @@ module.exports = {
     data: new SlashCommandBuilder()
         .setName('adduser')
         .setDescription('Adiciona um usuário a este ticket')
+        .setDefaultMemberPermissions(0)
         .addUserOption(opt =>
             opt
                 .setName('usuario')

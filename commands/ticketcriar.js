@@ -14,7 +14,7 @@ module.exports = {
     data: new SlashCommandBuilder()
         .setName('ticketcriar')
         .setDescription('Cria o painel de tickets no canal atual')
-        .setDefaultMemberPermissions(PermissionFlagsBits.Administrator),
+        .setDefaultMemberPermissions(0),
 
     async execute(interaction) {
         await interaction.deferReply({ ephemeral: true });
