@@ -5,6 +5,11 @@ const fs   = require('fs');
 const path = require('path');
 require('dotenv').config();
 
+// ─── HTTP mínimo para o Render não derrubar o serviço ────────────────────────
+const http = require('http');
+const PORT = process.env.PORT || 3000;
+http.createServer((_, res) => res.end('ok')).listen(PORT);
+
 // ─── Cliente ────────────────────────────────────────────────────────────────
 const client = new Client({
     intents: [
