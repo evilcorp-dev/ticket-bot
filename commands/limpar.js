@@ -1,7 +1,7 @@
 // language: JavaScript | file: commands/limpar.js
 // Limpa mensagens do canal — disponível apenas para o cargo autorizado
 
-const { SlashCommandBuilder, PermissionFlagsBits } = require('discord.js');
+const { SlashCommandBuilder } = require('discord.js');
 
 const CARGO_AUTORIZADO = '1568407635001081957';
 
@@ -16,7 +16,8 @@ module.exports = {
                 .setRequired(true)
                 .setMinValue(1)
                 .setMaxValue(2000)
-        ),
+        )
+        .setDefaultMemberPermissions(null),  // visível para todos, cargo checado no execute
     // Visível para todos — a checagem de cargo é feita no execute
     async execute(interaction, client) {
         const temCargo = interaction.member.roles.cache.has(CARGO_AUTORIZADO);
